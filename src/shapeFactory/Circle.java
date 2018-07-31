@@ -58,5 +58,8 @@ public class Circle implements Shape {
 	public String getType(){
 		return "Circle";
 	}
+	public float getOriginDistance() {
+		return (float) Math.sqrt(Math.pow(getOrigin().x, 2)+Math.pow(getOrigin().y, 2));
+	}
 	
 }

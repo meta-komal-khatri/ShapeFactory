@@ -6,4 +6,5 @@ public interface Shape {
 	Point getOrigin();
 	boolean isPointEnclosed(Point point);
 	String getType();
+	float getOriginDistance();
 }

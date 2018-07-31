@@ -49,5 +49,8 @@ public class Rectangle implements Shape {
 	public String getType(){
 		return "Rectangle";
 	}
+	public float getOriginDistance() {
+		return (float) Math.sqrt(Math.pow(getOrigin().x, 2)+Math.pow(getOrigin().y, 2));
+	}
 	
 }

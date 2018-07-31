@@ -47,6 +47,8 @@ public class Square implements Shape {
 	public String getType(){
 		return "Square";
 	}
-	
+	public float getOriginDistance() {
+		return (float) Math.sqrt(Math.pow(getOrigin().x, 2)+Math.pow(getOrigin().y, 2));
+	}
 }
 
