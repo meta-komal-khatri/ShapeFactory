@@ -13,6 +13,7 @@ public class Shapefactory {
 			return shape;
 			
 		case Rectangle:
+			
 			shape=new Rectangle(shapeProperties.get(0),shapeProperties.get(1),point);
 			return shape;
 		case Square:

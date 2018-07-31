@@ -20,5 +20,12 @@ public class Screen {
 		shapesOnScreen.add(shape);
 		}
 	}
+	public void deleteSpecificShape(String shapeType){
+		for(Shape shape:shapesOnScreen){
+			if(shape.getType().equals(shapeType)){
+				shapesOnScreen.remove(shape);
+			}
+		}
+	}
 	
 }

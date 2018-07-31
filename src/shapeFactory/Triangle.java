@@ -23,5 +23,8 @@ public class Triangle implements Shape {
 	public boolean isPointEnclosed() {
 		return false;
 	}
+	public String getType(){
+		return "Triangle";
+	}
 	
 }
