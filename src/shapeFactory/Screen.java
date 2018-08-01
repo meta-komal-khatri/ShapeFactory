@@ -15,18 +15,25 @@ import java.util.TreeMap;
 public class Screen {
 	int originX=0;
 	int originY=0;
-	int xMax;
-	int yMax;
+	static int xMax;
+	static int yMax;
 	Map<Shape,Date> shapesOnScreen=new HashMap<Shape,Date>();
 	Screen(int xMax,int yMax){
 		this.xMax=xMax;
 		this.yMax=yMax;
 		
 	}
-	public void addShape(String shapeType,Point point,List<Integer> shapeProperties) {
+	public boolean addShape(String shapeType,Point point,List<Integer> shapeProperties) {
+		if(point.x>xMax || point.y>yMax) {
+			throw new AssertionError("Point must be within Screen");
+		}
 		Shape shape=Shapefactory.createShape(shapeType, point, shapeProperties);
 		if(shape!=null) {
 		shapesOnScreen.put(shape,new Date());
+		return true;
+		}
+		else {
+			return false;
 		}
 	}
 	public void deleteSpecificShape(String shapeType){

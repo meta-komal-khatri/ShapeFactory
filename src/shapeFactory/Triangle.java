@@ -20,11 +20,14 @@ public class Triangle implements Shape {
 	public Point getOrigin() {
 		return point;
 	}
-	public boolean isPointEnclosed() {
+	public boolean isPointEnclosed(Point point) {
 		return false;
 	}
 	public String getType(){
 		return "Triangle";
+	}
+	public float getOriginDistance() {
+		return 0;
 	}
 	
 }
