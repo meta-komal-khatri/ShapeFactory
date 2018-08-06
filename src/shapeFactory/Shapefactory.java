@@ -9,15 +9,15 @@ public class Shapefactory {
 		switch(shapeTypeEnum) {
 		case Circle:
 			
-			shape=new Circle(shapeProperties.get(0),point);
+			shape=new Circle(shapeProperties.get(0),point);        //return object of circle
 			return shape;
 			
 		case Rectangle:
 			
-			shape=new Rectangle(shapeProperties.get(0),shapeProperties.get(1),point);
+			shape=new Rectangle(shapeProperties.get(0),shapeProperties.get(1),point);  //return object of rectangle
 			return shape;
 		case Square:
-			shape=new Square(shapeProperties.get(0),point);
+			shape=new Square(shapeProperties.get(0),point);      //return object of square
 			return shape;
 		case Triangle:
 			shape=new Triangle(shapeProperties.get(0),shapeProperties.get(1),point);
